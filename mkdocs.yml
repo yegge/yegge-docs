@@ -1,0 +1,17 @@
+site_name: Yegge Docs
+site_url: https://docs.yegge.com
+
+theme:
+  name: material
+  features: navigation.indexes
+  # font…
+  palette:
+    - scheme: slate
+      primary: indigo    # ← was black; switch to indigo (or remove this line)
+      accent: indigo
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search

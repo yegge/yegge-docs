@@ -1,0 +1,212 @@
+/* === LikeAGhost for MkDocs Material ===
+   Dark, minimal, ghostly glow. 
+   Assumes fonts: Inter (text), JetBrains Mono (code), Chathura (optional body alt)
+   -------------------------------------------------------------- */
+
+/* Core palette */
+:root {
+  --lag-bg: #0f0f12;          /* deep black-glass */
+  --lag-bg-elev: #14141a;     /* slightly raised surfaces */
+  --lag-fg: #f5f6f8;          /* ghostly white */
+  --lag-dim: #b9bcc6;         /* muted text */
+  --lag-accent: #7887ff;      /* indigo haze */
+  --lag-accent-soft: rgba(120,135,255,.18);
+  --lag-border: rgba(255,255,255,.06);
+
+  /* Map to Material tokens */
+  --md-default-bg-color: var(--lag-bg);
+  --md-default-fg-color: var(--lag-fg);
+  --md-typeset-color:    var(--lag-fg);
+  --md-code-fg-color:    #eaeefc;
+  --md-code-bg-color:    #0b0b0e;
+  --md-accent-fg-color:  var(--lag-accent);
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: #000000;
+
+  --md-shadow-z1: 0 6px 24px rgba(0,0,0,.45);
+  --md-shadow-z2: 0 10px 36px rgba(0,0,0,.6);
+}
+
+/* Optional: enforce fonts if mkdocs.yml isn't loading them */
+@supports (font-variation-settings: normal) {
+  :root {
+    --lag-font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+    --lag-font-code: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --lag-font-alt:  "Chathura", var(--lag-font-text);
+  }
+  .md-typeset { font-family: var(--lag-font-text); }
+  .md-typeset code, code, kbd, pre { font-family: var(--lag-font-code); }
+}
+
+/* Page background + subtle vignette */
+.md-main, .md-content { background: var(--lag-bg); }
+.md-container { background: linear-gradient(180deg, rgba(120,135,255,.04) 0%, transparent 18%) no-repeat, var(--lag-bg); }
+
+/* Headings: soft glow, tight tracking */
+.md-typeset h1, 
+.md-typeset h2, 
+.md-typeset h3 {
+  letter-spacing: .2px;
+  text-shadow: 0 0 .35rem var(--lag-accent-soft);
+}
+.md-typeset h1 { font-weight: 750; }
+.md-typeset h2 { font-weight: 680; }
+.md-typeset h3 { font-weight: 620; }
+
+/* Body text tone */
+.md-typeset p, 
+.md-typeset li { color: var(--lag-fg); }
+.md-typeset .md-muted, 
+.md-typeset .md-typeset__table caption { color: var(--lag-dim); }
+
+/* Links: ghost underline fill on hover */
+a, .md-typeset a {
+  color: var(--lag-fg);
+  text-decoration: none;
+  box-shadow: inset 0 -0.08em 0 var(--lag-accent-soft);
+  transition: box-shadow .18s ease, color .18s ease, opacity .18s ease;
+}
+a:hover, .md-typeset a:hover {
+  color: var(--lag-fg);
+  box-shadow: inset 0 -0.6em 0 var(--lag-accent-soft);
+}
+
+/* Nav + header */
+.md-header, .md-tabs { 
+  background: rgba(10,10,14,.8);
+  backdrop-filter: saturate(120%) blur(8px);
+  border-bottom: 1px solid var(--lag-border);
+}
+.md-header__title, .md-nav__title {
+  text-shadow: 0 0 .25rem var(--lag-accent-soft);
+}
+
+/* Sidebar / TOC */
+.md-sidebar--primary, .md-sidebar--secondary {
+  background: linear-gradient(180deg, rgba(120,135,255,.05), rgba(0,0,0,0)) no-repeat, var(--lag-bg);
+  border-right: 1px solid var(--lag-border);
+}
+.md-nav__link { color: var(--lag-dim); }
+.md-nav__link--active, .md-nav__link:hover { color: var(--lag-fg); }
+
+/* Cards, surfaces */
+.md-typeset .admonition, .md-typeset details,
+.md-typeset .highlight, .md-typeset pre, .md-typeset table,
+.md-typeset .tabbed-set, .md-typeset .superfences-tabs {
+  background: var(--lag-bg-elev);
+  border: 1px solid var(--lag-border);
+  box-shadow: var(--md-shadow-z1);
+}
+
+/* Code blocks */
+.md-typeset pre code {
+  background: transparent;
+  color: var(--md-code-fg-color);
+  text-shadow: 0 0 .2rem rgba(255,255,255,.06);
+}
+.md-typeset code {
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--lag-border);
+  padding: .08rem .35rem;
+  border-radius: 6px;
+}
+
+/* Inline kbd / shortcuts */
+kbd {
+  background: #101218;
+  border: 1px solid var(--lag-border);
+  box-shadow: inset 0 -2px 0 rgba(255,255,255,.04);
+}
+
+/* Tables */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  border-color: var(--lag-border);
+}
+.md-typeset table:not([class]) thead th {
+  background: #0d0f15;
+  color: var(--lag-fg);
+}
+
+/* Blockquotes */
+.md-typeset blockquote {
+  border-left: 3px solid var(--lag-accent);
+  background: rgba(120,135,255,.06);
+  box-shadow: inset 0 0 60px rgba(120,135,255,.05);
+}
+
+/* Search dialog */
+.md-search__form {
+  background: var(--lag-bg-elev);
+  border: 1px solid var(--lag-border);
+}
+.md-search__input { color: var(--lag-fg); }
+
+/* Footer */
+.md-footer {
+  background: #0c0c0f;
+  border-top: 1px solid var(--lag-border);
+  box-shadow: 0 -8px 24px rgba(0,0,0,.35);
+}
+.md-footer-meta, .md-footer__inner { color: var(--lag-dim); }
+
+/* Buttons / chips */
+.md-typeset .md-button {
+  color: var(--lag-fg);
+  border: 1px solid var(--lag-border);
+  background: linear-gradient(180deg, rgba(120,135,255,.10), rgba(120,135,255,.02));
+  box-shadow: 0 6px 20px rgba(120,135,255,.12);
+}
+.md-typeset .md-button:hover {
+  border-color: rgba(120,135,255,.45);
+}
+
+/* Focus rings for accessibility (ghost glow) */
+:focus-visible {
+  outline: 2px solid rgba(120,135,255,.55);
+  outline-offset: 2px;
+}
+
+/* Images: soft edge */
+.md-typeset img {
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.8);
+  border: 1px solid var(--lag-border);
+}
+
+/* Tiny polish on scrollbars (WebKit) */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.08);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+/* Headings must be visible in dark mode */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  color: var(--lag-fg) !important; /* ghost white */
+}
+
+/* Also make links inside headings visible */
+.md-typeset h1 a, .md-typeset h2 a, .md-typeset h3 a,
+.md-typeset h4 a, .md-typeset h5 a, .md-typeset h6 a {
+  color: var(--lag-fg) !important;
+}
+/* Compact line height and paragraph spacing */
+.md-typeset {
+  line-height: 1.35;        /* default is ~1.6; lower = tighter */
+  letter-spacing: 0.0em;   /* subtle, keeps it readable */
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset blockquote {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
