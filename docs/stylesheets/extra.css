@@ -72,13 +72,17 @@ a:hover, .md-typeset a:hover {
 }
 
 /* Nav + header */
-.md-header, .md-tabs { 
-  background: rgba(10,10,14,.8);
-  backdrop-filter: saturate(120%) blur(8px);
-  border-bottom: 1px solid var(--lag-border);
+/* Header background + glow */
+.md-header {
+  background: #0f0f12 !important;
+  box-shadow: 0 0 12px rgba(120,135,255,0.25);
+  border-bottom: 1px solid rgba(120,135,255,0.2);
 }
-.md-header__title, .md-nav__title {
-  text-shadow: 0 0 .25rem var(--lag-accent-soft);
+
+/* Header title text */
+.md-header__title {
+  color: #f5f6f8 !important;
+  text-shadow: 0 0 0.5rem rgba(120,135,255,0.3);
 }
 
 /* Sidebar / TOC */

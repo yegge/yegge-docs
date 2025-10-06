@@ -3,6 +3,7 @@ site_url: https://docs.yegge.com
 
 theme:
   name: material
+  logo: _assets/logo.svg
   features: navigation.indexes
   # font…
   palette:
@@ -12,6 +13,11 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-
+nav:
+  - Home: index.md
+  - About: about.md
+  - A.I. Prompts: ai-prompts/index.md
+  - Contact: contact.md
+  
 plugins:
   - search
