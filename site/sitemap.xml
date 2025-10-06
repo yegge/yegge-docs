@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.yegge.com/</loc>
-         <lastmod>2025-10-05</lastmod>
+         <lastmod>2025-10-06</lastmod>
     </url>
     <url>
          <loc>https://docs.yegge.com/about/</loc>
-         <lastmod>2025-10-05</lastmod>
+         <lastmod>2025-10-06</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.yegge.com/A.I.%20Prompts/Website%20Build/</loc>
+         <lastmod>2025-10-06</lastmod>
     </url>
 </urlset>

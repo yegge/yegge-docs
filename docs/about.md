@@ -12,24 +12,21 @@ Brian Yegge is a seasoned Technology Analyst at The University of Texas Health S
 
 # MUSIC
 ### SOLO PROJECTS
-[ANGERSHADE](https://hyperfollow.com/angershade)
-[YEGGE](https://hyperfollow.com/brianyegge)
-[THE CORRUPTIVE](https://hyperfollow.com/thecorruptive)
-
+###### [ANGERSHADE - (2008 - present)](https://hyperfollow.com/angershade)
+###### [THE CORRUPTIVE - (2024 - present)](https://hyperfollow.com/thecorruptive)
+###### [THE EARLY YEARS - YEGGE - 1994 - 2009](https://yegge.com/earlyyears)
+---
 ### BANDS (as bassist player &amp; contributor)
-[PRIMARY](https://soundcloud.com/primary-3)
-[DEADBOLT ZEN](https://youtube.com/playlist?list=PLyCI8LY_68Eg8lI-T3S59sN0bcunIz0hN&si=ETW4D7sXyHIbmMT4)
-[RISEN](https://yegge.com/risen)
+###### [PRIMARY - (2005 - 2009)](https://soundcloud.com/primary-3)
+###### [DEADBOLT ZEN - (2011 - )](https://youtube.com/playlist?list=PLyCI8LY_68Eg8lI-T3S59sN0bcunIz0hN&si=ETW4D7sXyHIbmMT4)
+###### [RISEN - (1994 - 1998)](https://yegge.com/risen)
+---
 ### THE INFLUENZA
 ##### My Playlists of influences
-[APPLE MUSIC](https://music.apple.com/us/playlist/the-influenza/pl.u-r07xXT5R3NL)
-[YOUTUBE VIDEO](https://youtube.com/playlist?list=PLyCI8LY_68EiYz2lZFkk-QOO02BtnyL_K&amp;si=3umdaClN43Ty-lbS)
-[YOUTUBE MUSIC](https://youtube.com/playlist?list=PLyCI8LY_68Eh_Uug5y_DLUNGF1KA--u0g&amp;si=RAdhN803-FhIQqCO)
-
--------
-
-[THE EARLY YEARS 1994 - 2009](https://yegge.com/earlyyears)
+###### [APPLE MUSIC](https://music.apple.com/us/playlist/the-influenza/pl.u-r07xXT5R3NL)
+###### [YOUTUBE VIDEO](https://youtube.com/playlist?list=PLyCI8LY_68EiYz2lZFkk-QOO02BtnyL_K&amp;si=3umdaClN43Ty-lbS)
+###### [YOUTUBE MUSIC](https://youtube.com/playlist?list=PLyCI8LY_68Eh_Uug5y_DLUNGF1KA--u0g&amp;si=RAdhN803-FhIQqCO)
 
 ----
 # PHOTOGRAPHY
-Coming soon
+Sonancy.Studio  (retired)
