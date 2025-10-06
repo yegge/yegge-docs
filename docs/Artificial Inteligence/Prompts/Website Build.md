@@ -1,7 +1,8 @@
 # Website Build
 ---
 -------------- star copy below this line-------------
-## Website Prompt and Proposal (NO SERVICES)
+# Website Prompt and Proposal (NO SERVICES)
+
 ###### PURPOSE:  To develop a relational database driven static website at a minimal hit to the wallet.  Budget is important, but not at the expense of quality.  It should be a website operation that can exist with minimal to no maintenance or interaction other than updating with new content.  In other words it should carry on after I pass away.
 
 ###### I’m a musician and I’m in need of a website to catalog my work.  I have two music projects I’d like to represent.  The two projects go by the pseudonyms that they are published under as the album artist.  Those pseudonyms are “Angershade” & “The Corruptive” the publishing company/record label name under both projects is called “Yegge”.  The domains I have with this website are yegge.com, angershade.com, & thecorruptive.com.
@@ -9,41 +10,57 @@
 ###### Design with a Glassmorphism style using frosted glass effects with transparency and backdrop blur. Elements should have subtle light borders (1px) and slight transparency. Create depth through layering of translucent elements. Use colorful backgrounds (gradients work well) with frosted glass UI elements on top. Apply backdrop-blur CSS properties and use RGBA colors with alpha transparency. Aim for a modern, clean aesthetic with subtle light reflections and shadows. The design should be unique, beautiful and detailed. the colors should reflect a dark mode style and feel.  Font- family system font or Inter for headings and paragraphs.
 
 FOLDER HIERARCHY
-	WEBSITES
-	adminpanel/
-           index.html (all the ways to administer and update the sights)
-		assets/
-			css/ (design elements consistent across all sites)
-			js/(consistent scripting for all sights)
-			img/ (images)
-			audio/ (.mp4 for streaming)
-		Yegge/
-			index.html
-		Angershade/
-			index.html (blog filtered)
-			discography (discography filtered)
-		The Corruptive/
-			index.html (blog filtered)
-			discography (discography filtered)
-		blog/
-		discography/
-         subscribe/ (from to subscribe to newsletter)
+	'
+```	WEBSITES
+-----adminpanel/
+---------index.html (all the ways to administer and update the sights)
+-----assets/
+---------css/ (design elements consistent across all sites)
+---------js/(consistent scripting for all sights)
+---------img/ (images)
+---------audio/ (.mp4 for streaming)
+-----Yegge/
+---------index.html
+-----Angershade/
+---------index.html (blog filtered)
+---------discography (discography filtered)
+-----The Corruptive/
+---------index.html (blog filtered)
+---------discography (discography filtered)
+-----blog/
+-----discography/
+---------subscribe/ (from to subscribe to newsletter)
 		 inquiry/ (form to get in contact)
+```
 
-Footer: (there should be away to add to this per site in admin-panel)
-© 2025 <a href=“https://hyperfollow.com/brianyegge”>Brian Yegge</a> | <a href=“https://hyperfollow.com/angershade”>Angershade LLC</a> | <a href=“https://hyperfollow.com/thecorruptive”>The Corruptive</a> | ℗ Yegge
+#### Footer: 
+###### (there should be away to add to this per site in admin-panel)
+`© 2025 <a href=“https://hyperfollow.com/brianyegge”>Brian Yegge</a> | <a href=“https://hyperfollow.com/angershade”>Angershade LLC</a> | <a href=“https://hyperfollow.com/thecorruptive”>The Corruptive</a> | ℗ Yegge
+`
 
-I.  BLOG: 
+### I.  BLOG: 
 
-I would like to have a blog that can be sorted by category, the categories would be “Angershade” “The Corruptive” & “Yegge” which I will set via each post.  It should have a way to tag posts as well.   Blog editor should have a way to blog in rich text, html, markdown, picture gallery uploads, and code blocks with all code able to be rendered when published.  There should be an ability to create drafts as well, and post date blog posts and schedule future blog posts.
+##### I would like to have a blog that can be sorted by category, the categories would be “Angershade” “The Corruptive” & “Yegge” which I will set via each post.  It should have a way to tag posts as well.   Blog editor should have a way to blog in rich text, html, markdown, picture gallery uploads, and code blocks with all code able to be rendered when published.  There should be an ability to create drafts as well, and post date blog posts and schedule future blog posts.
 
-II. DISCOGRAPHY 
-DATABASE to be created for the purpose of display of my catalog.  It will also serve as an organizational tool on the back end to help define progress and show where progress needs to be made, this is measured by the track as defined in the logic below. An admin panel and view is required with an easy to use interface to update the storage and the databases. The domain is yegge.com, the admin site could be yegge.com/admin, the files will be accessible across a total of three domains, yegge.com. angershade.com, thecorruptive.com. 
- THE DATA 
-This will be a relational database of music and metadata.  There will be one catalog each in two parts.  The DISCOGRAPHY/database will consist of both published music and works in progress with PUBLIC VIEW restrictions, a VIP view with restrictions, and an admin view with NO Restrictions, along with an admin panel for entering the data.  The PUBLIC VIEW will have subviews that are determined by the Album Artist field, example, Angershade.com will only show the albums listed under the ALBUM ARTIST “Angershade” same for thecorruptive.com to show “The Corruptive”. The two tables (parts) are ALBUM TABLE & TRACKS TABLE, the tracks will be related to the ALBUM ID (PARENT) that they were published on. It will consist of the following data to be displayed or hidden on the website.  
+### II. DISCOGRAPHY 
+##### DATABASE
+###### To be created for displaying my catalog, this will also serve as an organizational tool on the backend to help define progress and identify areas that need improvement. This progress is measured by the track as defined in the logic below. An admin panel and a user-friendly interface are required to update the storage and databases. The domain is yegge.com, and the admin site could be accessed at yegge.com/admin. The files will be accessible across three domains: yegge.com, angershade.com, and thecorruptive.com.
 
-SCHEMA
-ALBUM TABLE:
+###### This will be a relational database of music and metadata. There will be two catalogs, each divided into two parts. The DISCOGRAPHY/database will contain both published music and works in progress. It will have three views: PUBLIC VIEW, VIP VIEW, and ADMIN VIEW. The PUBLIC VIEW will have subviews determined by the Album Artist field. For example, Angershade.com will only show albums listed under the ALBUM ARTIST “Angershade,” and thecorruptive.com will only show albums listed under the ALBUM ARTIST “The Corruptive.” The two tables (parts) are ALBUM TABLE and TRACKS TABLE. The tracks will be related to the ALBUM ID (PARENT) of the album they were published on. The following data will be displayed or hidden on the website:
+```
+- Album information
+- Track information
+- Artist information
+- Release date
+- Genre
+- Rating
+- Metadata (e.g., lyrics, notes)  
+```
+
+#### SCHEMA
+##### ALBUM TABLE:
+
+```
 		ID: INTEGER | PRIMARY KEY
 		ARTWORK GALLERY: (linked by URL thumbnails for each of the following (Front Cover) (BackCover) (Sleeve) (Sticker) Front cover 		displayed on a carusel and contained by default.  			Clicking on any of thumbnail will pop large within the page like a gallery.  Images to be 		hosted via a bucket on Cloudflare’s R2 Object Storage.)
 		ALBUM NAME: VARCHAR(255) (allowed to be URL linked)
@@ -64,10 +81,11 @@ ALBUM TABLE:
 		VISIBILITY: dropdown menu
 		PUBLIC: Viewed on website
 		ADMIN: Viewable to the admin only, hidden from public view. 		VIP: Generate a random link to view
-		STREAMING LINKS: URL (Apple Music, Spotify, Youtube Music, iTunes, Amazon Music, Tidal, Bandcamp,) 		PURCHASE: URL (CD, VINYL, DIGITAL DOWNLOAD) 		ALBUM COMMENTARY: TEXT BOX 	
+		STREAMING LINKS: URL (Apple Music, Spotify, Youtube Music, iTunes, Amazon Music, Tidal, Bandcamp,) 		PURCHASE: URL (CD, VINYL, DIGITAL DOWNLOAD) 		ALBUM COMMENTARY: TEXT BOX	
+```
 
-
-TRACK TABLE: 
+##### TRACK TABLE: 
+```
 	TRACK ID: Integer | Primary Key
 	ALBUM ID: Integer | Foreign Key
 	TRACK NO.: INTEGER | For sorting on Album 
@@ -82,23 +100,31 @@ TRACK TABLE: 
 	Track Duration: INTEGER | MM:SS
 	STREAM: EMBEDDED CONTENT (with checkbox on the admin side to prevent streaming and provide an slightly dark overlay over 	the wave file) 	PURCHASE DIGITAL DOWNLOAD: (URL to purchase download)
 	TRACK COMMENTARY: TEXT BOX
+```
 
-III.  SUBSCRIPTION PAGE:
- 	A form with the following fields.
+---
+
+### III.  SUBSCRIPTION PAGE:
+```
+ 	# A form with the following fields.
+
 		FIRST NAME: TEXT (REQUIRED) 		LAST NAME: TEXT (REQUIRED) 		PHONE NUMBER: phone number field (OPTIONAL) 		EMAIL ADDRESS: email (REQUIRED)
 		COUNTRY: Dropdown with list of countries (REQUIRED)
 		SUBMIT BUTTON
 	Upon submission, Redirect to a thank you page confirming submission.
 		Append to a subscription database
-
-IV.  INQUIRY/CONTACT PAGE:  
+```
+### IV.  INQUIRY/CONTACT PAGE:  
+```
 	A form same as contact without the subscribe	
 		FIRST NAME: TEXT 		LAST NAME: TEXT 		PHONE NUMBER: phone number field 		EMAIL ADDRESS: email 		PREFERRED MESSENGER: Option to pick the following: (iMessage, SMS, Facebook Messenger, WhatsApp) 		MESSAGE: TEXT BOX 		SUBMIT BUTTON
 Upon submission, Redirect to a thank you page confirming submission.
 		Send to email admin@yegge.com with prefilled subject “WEBSITE INQUIRY”
+```
 
-V.  TERMS OF SERVICE PAGE (Markdown format)
+### V.  TERMS OF SERVICE PAGE (Markdown format)
 
+```
 # TERMS OF SERVICE/USE
 ###### Updated August 2, 2025
 
@@ -172,7 +198,11 @@ Respect the intellectual property of image creators. Share for educational or no
 
 ###### Angershade.com, Yegge.com, thecorruptive.com,
 
-
+```
 ——— 
 
-USING a MacBook Pro M3 Pro with 36GB of unified memory & a Mac mini M2 PRO 32GB of unified memory
+###### USING a MacBook Pro M3 Pro with 36GB of unified memory & a Mac mini M2 PRO 32GB of unified memory
+
+--------- STOP COPY BEFORE THIS LINE----------
+
+Be sure to modify with your own varibles
